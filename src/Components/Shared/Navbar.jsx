@@ -18,7 +18,13 @@ function NavbarApp() {
             Home
           </Nav.Link>
           <Nav.Link as={NavLink} to="/characters">
-            Charactes
+            Characters
+          </Nav.Link>
+          <Nav.Link as={NavLink} to="/episodes">
+            Episodes
+          </Nav.Link>
+          <Nav.Link as={NavLink} to="/locations">
+            Locations
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
