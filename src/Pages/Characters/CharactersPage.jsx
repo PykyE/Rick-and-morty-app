@@ -1,7 +1,7 @@
 import React from 'react';
 import usePageTitle from 'Hooks/usePageTitle';
 
-import Characters from 'Containers/Characters';
+import Characters from 'Containers/Characters/Characters';
 
 function CharactesPage() {
   usePageTitle('Characters');

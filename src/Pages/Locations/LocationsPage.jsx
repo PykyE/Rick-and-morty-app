@@ -1,7 +1,7 @@
 import React from 'react';
 import usePageTitle from 'Hooks/usePageTitle';
 
-import Locations from 'Containers/Locations';
+import Locations from 'Containers/Locations/Locations';
 
 function LocationsPage() {
   usePageTitle('Locations');

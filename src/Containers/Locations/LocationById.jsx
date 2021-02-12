@@ -2,10 +2,10 @@ import React from 'react';
 
 import useFetch from 'Hooks/useFetch';
 
-import { getCharacterById } from 'Utils/Requester';
+import { getLocationById } from 'Utils/Requester';
 
-function CharacterById({ id }) {
-  const { data, loading, error } = useFetch(() => getCharacterById({ id }), [
+function LocationById({ id }) {
+  const { data, loading, error } = useFetch(() => getLocationById({ id }), [
     id,
   ]);
 
@@ -22,4 +22,4 @@ function CharacterById({ id }) {
   );
 }
 
-export default CharacterById;
+export default LocationById;

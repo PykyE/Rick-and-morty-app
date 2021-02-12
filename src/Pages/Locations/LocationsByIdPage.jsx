@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import usePageTitle from 'Hooks/usePageTitle';
+import LocationById from 'Containers/Locations/LocationById';
 
 function LocationsByIdPage() {
   const { locationId } = useParams();
@@ -9,7 +10,7 @@ function LocationsByIdPage() {
 
   return (
     <section className="container py-3">
-      {/* <LocationById id={locationId} /> */}
+      <LocationById id={locationId} />
     </section>
   );
 }

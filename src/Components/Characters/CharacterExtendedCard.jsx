@@ -3,14 +3,17 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-function CharacterCard({
+function ExtendedCharactercard({
   id,
   name,
   status,
   species,
+  type,
   gender,
   image,
-  origin = {}
+  origin = {},
+  location,
+  episode
 }) {
   return (
     <Card bg="primary" text="white" className="mb-2">
@@ -21,15 +24,20 @@ function CharacterCard({
       <Card.Body>
         <ul>
           <li>Species: {species}</li>
+          <li>Type: {type}</li>
           <li>Gender: {gender}</li>
-          <li>Origin: {origin.name}</li>
+          <li>Origin name: {origin.name}</li>
+          <li>Origin link: {origin.link}</li>
+          <li>Location name: {location.name}</li>
+          <li>Location link: {location.link}</li>
+          <li>Episodes array: {episode}</li>
         </ul>
-        <Button variant="secondary" as={Link} to={`/characters/${id}`}>
-          Ver más Detalles
+        <Button variant="secondary" as={Link} to={`/characters/`}>
+          Volver    
         </Button>
       </Card.Body>
     </Card>
   );
 }
 
-export default CharacterCard;
+export default ExtendedCharactercard;

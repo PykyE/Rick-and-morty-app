@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Layout from 'Components/Shared/Layout';
 
-import Home from 'Pages/Home';
-import CharactersPage from 'Pages/CharactersPage';
-import CharactersByIdPage from 'Pages/CharacterByIdPage';
-import LocationsPage from 'Pages/LocationsPage';
-import LocationsByIdPage from 'Pages/LocationsByIdPage';
-import EpisodesPage from 'Pages/EpisodesPage'
-import EpisodesByIdPage from 'Pages/EpisodesByIdPage'
-import NotFound from 'Pages/NotFound';
+import Home from 'Pages/Other/Home';
+import NotFound from 'Pages/Other/NotFound';
+import CharactersPage from 'Pages/Characters/CharactersPage';
+import CharactersByIdPage from 'Pages/Characters/CharacterByIdPage';
+import LocationsPage from 'Pages/Locations/LocationsPage';
+import LocationsByIdPage from 'Pages/Locations/LocationsByIdPage';
+import EpisodesPage from 'Pages/Episodes/EpisodesPage'
+import EpisodesByIdPage from 'Pages/Episodes/EpisodesByIdPage'
 
 import 'bootswatch/dist/minty/bootstrap.min.css';
 import './App.scss';
