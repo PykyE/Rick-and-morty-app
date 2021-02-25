@@ -13,7 +13,7 @@ import LocationsByIdPage from 'Pages/Locations/LocationsByIdPage';
 import EpisodesPage from 'Pages/Episodes/EpisodesPage'
 import EpisodesByIdPage from 'Pages/Episodes/EpisodesByIdPage'
 
-import 'bootswatch/dist/Sketchy/bootstrap.min.css';
+import 'bootswatch/dist/sketchy/bootstrap.min.css';
 import './App.scss';
 
 function App() {
