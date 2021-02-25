@@ -1,6 +1,6 @@
 import React from "react";
 import usePageTitle from "Hooks/usePageTitle";
-import background from "/U stuff/React/Rick-And-Morty-App/public/Background.jpg";
+import background from "Public/Background.jpg";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import styles from "./Home.module.css";
 

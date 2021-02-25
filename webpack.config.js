@@ -19,6 +19,7 @@ const config = {
       Hooks: path.resolve(__dirname, 'src', 'Hooks'),
       Pages: path.resolve(__dirname, 'src', 'Pages'),
       Utils: path.resolve(__dirname, 'src', 'Utils'),
+      Public: path.resolve(__dirname, 'public'),
     },
   },
   module: {
