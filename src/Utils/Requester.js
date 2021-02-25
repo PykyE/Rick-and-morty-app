@@ -24,6 +24,10 @@ export function getCharacterById({ id = 0 }) {
   return RickApi.get(`character/${id}`);
 }
 
+export function getMultipleCharactersById({ ids = '0' }) {
+  return RickApi.get(`character/${ids}`);
+}
+
 export function getEpisodes({
   page = '',
   name = '',

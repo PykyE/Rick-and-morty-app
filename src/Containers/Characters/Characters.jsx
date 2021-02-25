@@ -9,6 +9,8 @@ import CharacterCard from 'Components/Characters/CharacterCard';
 import useFormControl from 'Hooks/useFormControl';
 import useFetch from 'Hooks/useFetch';
 
+import Waiter from 'Components/Shared/Waiter'
+
 import { getCharacters } from 'Utils/Requester';
 
 function Characters() {
@@ -44,7 +46,7 @@ function Characters() {
         onChangePage={setPage}
       />
       {loading ? (
-        <p>loading...</p>
+        <Waiter></Waiter>
       ) : error ? (
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (

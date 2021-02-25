@@ -11,22 +11,19 @@
   flex-direction: column;
 }
 
+.btnDiv {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
 .cardImgAlive {
   filter: grayscale(0%);
 }
 
 .cardImgDead {
   filter: grayscale(100%);
-}
-
-.btnSize {
-  min-width: 120px;
-}
-
-span {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  font-family: "Comic Sans MS";
 }

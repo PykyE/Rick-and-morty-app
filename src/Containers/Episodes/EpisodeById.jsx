@@ -4,6 +4,8 @@ import useFetch from 'Hooks/useFetch';
 
 import { getEpisodeById } from 'Utils/Requester';
 
+import Waiter from 'Components/Shared/Waiter'
+
 function EpisodeById({ id }) {
   const { data, loading, error } = useFetch(() => getEpisodeById({ id }), [
     id,
@@ -12,7 +14,7 @@ function EpisodeById({ id }) {
   return (
     <>
       {loading ? (
-        <p>loading...</p>
+        <Waiter></Waiter>
       ) : error ? (
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (

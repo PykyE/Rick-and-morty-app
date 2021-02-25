@@ -1,8 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import styles from './CharacterExtendedCard.module.css';
-import { Link } from 'react-router-dom';
-import { getEndNumber } from '../../Utils/URLTools';
 
 function ExtendedCharactercard({
   name,
@@ -30,18 +28,10 @@ function ExtendedCharactercard({
           <p style={{textAlign:'center',fontFamily:'Comic Sans MS'}}>Origin: {origin.name}</p>
           <p style={{textAlign:'center',fontFamily:'Comic Sans MS',marginBottom:'0'}}>Location: {location.name}</p>
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between", marginTop:'20px'}}>
+        <div className={styles.btnDiv}>
           <a className={`btn btn-secondary ${styles.btnSize}`} href="/characters/">
             Volver
           </a>
-          {(origin.name !== 'unknown')?(
-          <Link className={`btn btn-info ${styles.btnSize}`} to={`/location/${getEndNumber(origin.url)}`}>
-            Origin link
-          </Link>):<></>}
-          {(location.name !== 'unknown')?(
-          <Link className={`btn btn-info ${styles.btnSize}`} to={`/location/${getEndNumber(location.url)}`}>
-            Location link
-          </Link>):<></>}
         </div>
       </Card.Body>
     </Card>

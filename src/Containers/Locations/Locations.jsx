@@ -11,6 +11,9 @@ import useFetch from 'Hooks/useFetch';
 
 import { getLocations } from 'Utils/Requester';
 
+import Waiter from "Components/Shared/Waiter.jsx"
+
+
 function Locations() {
   const [page,setPage] = useState(1);
   const [filters, handleChange, handleSubmit] = useFormControl({
@@ -40,7 +43,7 @@ function Locations() {
         onChangePage={setPage}
       />
       {loading ? (
-        <p>loading...</p>
+        <Waiter></Waiter>
       ) : error ? (
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (

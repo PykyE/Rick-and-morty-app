@@ -7,6 +7,7 @@ import S1 from "../../Resources/S1.png";
 import S2 from "../../Resources/S2.png";
 import S3 from "../../Resources/S3.png";
 import S4 from "../../Resources/S4.png";
+import { getEndNumber } from "../../Utils/URLTools";
 
 const getSeason = (name) => {
   let season = name.substring(1, 3);
@@ -24,19 +25,32 @@ const getSeason = (name) => {
   }
 };
 
-function EpisodeCard({ name, air_date, episode, id }) {
+const getCharacters = (characters) => {
+  let res = "";
+  for (let i = 0; i < Object.keys(characters).length; i++) {
+    let num = getEndNumber(characters[i]); 
+    res += (i!==Object.keys(characters).length-1)?`${num},`:num;
+  }
+  return res;
+};
+
+function EpisodeCard({ name, air_date, episode, characters }) {
   return (
     <Card bg="primary" text="white" className="mb-2">
-      <Card.Header className={styles.myHeader}>
-        {name}
-      </Card.Header>
-      <Card.Img className = {styles.myImage} variant="top" src={getSeason(episode)} alt={name} title={name}/>
+      <Card.Header className={styles.myHeader}>{name}</Card.Header>
+      <Card.Img
+        className={styles.myImage}
+        variant="top"
+        src={getSeason(episode)}
+        alt={name}
+        title={name}
+      />
       <Card.Body>
         <ul>
           <li>On air date: {air_date}</li>
         </ul>
         <div className={styles.btnContainer}>
-          <Button variant="info" as={Link} to={`/episode/${id}`}>
+          <Button variant="info" as={Link} to={`/characters/list/${getCharacters(characters)}`}>
             Ver personajes
           </Button>
         </div>

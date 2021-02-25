@@ -6,6 +6,8 @@ import CharacterExtendedCard from 'Components/Characters/CharacterExtendedCard'
 
 import { getCharacterById } from 'Utils/Requester';
 
+import Waiter from 'Components/Shared/Waiter'
+
 function CharacterById({ id }) {
   const { data, loading, error } = useFetch(() => getCharacterById({ id }), [
     id,
@@ -14,7 +16,7 @@ function CharacterById({ id }) {
   return (
     <>
       {loading ? (
-        <p>loading...</p>
+        <Waiter></Waiter>
       ) : error ? (
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (

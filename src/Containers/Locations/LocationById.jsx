@@ -4,6 +4,8 @@ import useFetch from 'Hooks/useFetch';
 
 import { getLocationById } from 'Utils/Requester';
 
+import Waiter from 'Components/Shared/Waiter'
+
 function LocationById({ id }) {
   const { data, loading, error } = useFetch(() => getLocationById({ id }), [
     id,
@@ -12,7 +14,7 @@ function LocationById({ id }) {
   return (
     <>
       {loading ? (
-        <p>loading...</p>
+        <Waiter></Waiter>
       ) : error ? (
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (

@@ -11,12 +11,14 @@ import useFetch from 'Hooks/useFetch';
 
 import { getEpisodes } from 'Utils/Requester';
 
+import Waiter from "Components/Shared/Waiter.jsx"
+
 function Episodes() {
   const [page,setPage] = useState(1);
   const [filters, handleChange, handleSubmit] = useFormControl({
     name: '',
     air_date: '',
-    id: 0 
+    id: 0
   });
   const { data, loading, error } = useFetch(
     () => getEpisodes({ page, ...filters }),
@@ -41,7 +43,7 @@ function Episodes() {
         onChangePage={setPage}
       />
       {loading ? (
-        <p>loading...</p>
+        <Waiter></Waiter>
       ) : error ? (
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (

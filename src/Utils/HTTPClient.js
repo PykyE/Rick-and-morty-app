@@ -21,22 +21,22 @@ class HTTPClient {
       })
       .then(data => {
         if (debugMode) {
-          console.log('%c--------- Request --------', 'font-weight: bold');
-          console.log(request);
-          console.log('%c-------- Response --------', 'font-weight: bold');
-          console.log(data);
-          console.log('%c-------- END FETCH --------', 'font-weight: bold');
+          // console.log('%c--------- Request --------', 'font-weight: bold');
+          // console.log(request);
+          // console.log('%c-------- Response --------', 'font-weight: bold');
+          // console.log(data);
+          // console.log('%c-------- END FETCH --------', 'font-weight: bold');
         }
 
         return data;
       })
       .catch(err => {
         if (debugMode) {
-          console.log('%c--------- Request --------', 'font-weight: bold');
-          console.log(request);
-          console.log('%c-------- Response --------', 'font-weight: bold');
-          console.log(err.message);
-          console.log('%c-------- END FETCH --------', 'font-weight: bold');
+          // console.log('%c--------- Request --------', 'font-weight: bold');
+          // console.log(request);
+          // console.log('%c-------- Response --------', 'font-weight: bold');
+          // console.log(err.message);
+          // console.log('%c-------- END FETCH --------', 'font-weight: bold');
         }
 
         throw err;

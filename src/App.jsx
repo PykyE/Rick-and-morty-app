@@ -7,6 +7,7 @@ import Home from 'Pages/Other/Home';
 import NotFound from 'Pages/Other/NotFound';
 import CharactersPage from 'Pages/Characters/CharactersPage';
 import CharactersByIdPage from 'Pages/Characters/CharacterByIdPage';
+import MultipleCharactersByIdPage from 'Pages/Characters/MultipleCharactersByIdPage';
 import LocationsPage from 'Pages/Locations/LocationsPage';
 import LocationsByIdPage from 'Pages/Locations/LocationsByIdPage';
 import EpisodesPage from 'Pages/Episodes/EpisodesPage'
@@ -22,7 +23,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/characters" component={CharactersPage} />
-          <Route path="/characters/:characterId" component={CharactersByIdPage} />
+          <Route exact path="/characters/:characterId" component={CharactersByIdPage} />
+          <Route exact path="/characters/list/:charIds" component={MultipleCharactersByIdPage} />
           <Route exact path="/locations" component={LocationsPage} />
           <Route path="/locations/:locationId" component={LocationsByIdPage} />
           <Route exact path="/episodes" component={EpisodesPage} />
