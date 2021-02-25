@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import styles from './LocationCard.module.css';
 
 function LocationCard({
   id,
@@ -11,17 +12,19 @@ function LocationCard({
 }) {
   return (
     <Card bg="primary" text="white" className="mb-2">
-      <Card.Header>
+      <Card.Header className={styles.myHeader}>
         {name}
       </Card.Header>
       <Card.Body>
         <ul>
           <li>Type: {type}</li>
-          <li>{dimension}</li>
+          <li>Dimensión: {dimension}</li>
         </ul>
-        <Button variant="secondary" as={Link} to={`/location/${id}`}>
-          Ver más Detalles
-        </Button>
+        <div className={styles.btnContainer}>
+          <Button variant="info" as={Link} to={`/location/${id}`}>
+            Ver residentes
+          </Button>
+        </div>
       </Card.Body>
     </Card>
   );

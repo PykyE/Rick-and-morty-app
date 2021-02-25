@@ -1,0 +1,11 @@
+.myHeader {
+    text-align: center;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+}

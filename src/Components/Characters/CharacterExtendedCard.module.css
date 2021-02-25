@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  width: 500px;
+}
+
+.returnDiv {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.cardImgAlive {
+  filter: grayscale(0%);
+}
+
+.cardImgDead {
+  filter: grayscale(100%);
+}
+
+.btnSize {
+  min-width: 120px;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-family: "Comic Sans MS";
+}

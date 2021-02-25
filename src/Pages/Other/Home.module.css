@@ -1,0 +1,15 @@
+.jumbotron {
+  width: 350px;
+  height: 300px ;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgb(255, 202, 178);
+  border-radius: 50px;
+}
+
+.jumbotron h2{
+    text-align: center;
+}

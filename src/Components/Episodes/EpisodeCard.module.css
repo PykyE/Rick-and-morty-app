@@ -1,0 +1,17 @@
+.myHeader {
+  text-align: center;
+  min-height: 48px;
+}
+
+.myImage {
+    width: 280px;
+    height: 300px;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+}

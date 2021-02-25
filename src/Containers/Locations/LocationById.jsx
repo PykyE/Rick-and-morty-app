@@ -16,7 +16,8 @@ function LocationById({ id }) {
       ) : error ? (
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (
-        <div>{data.name}</div>
+        <div>
+        </div>
       )}
     </>
   );

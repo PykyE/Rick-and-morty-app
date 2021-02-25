@@ -16,7 +16,7 @@ function Episodes() {
   const [filters, handleChange, handleSubmit] = useFormControl({
     name: '',
     air_date: '',
-    code: ''
+    id: 0 
   });
   const { data, loading, error } = useFetch(
     () => getEpisodes({ page, ...filters }),

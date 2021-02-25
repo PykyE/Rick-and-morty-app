@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import styles from "./CharacterCard.module.css";
 
 function CharacterCard({
   id,
@@ -15,7 +16,7 @@ function CharacterCard({
   return (
     <Card bg="primary" text="white" className="mb-2">
       <Card.Img variant="top" src={image} alt={name} title={name} />
-      <Card.Header>
+      <Card.Header className={styles.myHeader}>
         {name} ({status})
       </Card.Header>
       <Card.Body>
@@ -24,9 +25,11 @@ function CharacterCard({
           <li>Gender: {gender}</li>
           <li>Origin: {origin.name}</li>
         </ul>
-        <Button variant="secondary" as={Link} to={`/characters/${id}`}>
-          Ver más Detalles
-        </Button>
+        <div className={styles.btnContainer}>
+          <Button variant="info" as={Link} to={`/characters/${id}`}>
+            Ver más Detalles
+          </Button>
+        </div>
       </Card.Body>
     </Card>
   );

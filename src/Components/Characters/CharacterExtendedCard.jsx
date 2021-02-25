@@ -1,42 +1,51 @@
+import React from "react";
+import Card from "react-bootstrap/Card";
+import styles from './CharacterExtendedCard.module.css';
 import { Link } from 'react-router-dom';
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import { getEndNumber } from '../../Utils/URLTools';
 
 function ExtendedCharactercard({
-  id,
   name,
   status,
   species,
   type,
   gender,
   image,
-  origin = {},
-  location,
-  episode
+  origin=[],
+  location = [],
+  episode = [],
 }) {
   return (
-    <Card bg="primary" text="white" className="mb-2">
-      <Card.Img variant="top" src={image} alt={name} title={name} />
-      <Card.Header>
-        {name} ({status})
+    <div className={styles.returnDiv}>
+    <Card className={`${styles.card} mb-2`} bg="primary" text="white">
+      <Card.Img className={(status==='Alive')?styles.cardImgAlive:styles.cardImgDead} src={image} alt={name} title={name}/>
+      <Card.Header style={{textAlign: 'center',fontFamily:'Comic Sans MS', paddingBottom:'6px'}}>
+          {name} ({status})
       </Card.Header>
       <Card.Body>
-        <ul>
-          <li>Species: {species}</li>
-          <li>Type: {type}</li>
-          <li>Gender: {gender}</li>
-          <li>Origin name: {origin.name}</li>
-          <li>Origin link: {origin.link}</li>
-          <li>Location name: {location.name}</li>
-          <li>Location link: {location.link}</li>
-          <li>Episodes array: {episode}</li>
-        </ul>
-        <Button variant="secondary" as={Link} to={`/characters/`}>
-          Volver    
-        </Button>
+        <div className={styles.span} style={{borderStyle: 'double', width:'450px', padding:'10px'}}>
+          <p style={{textAlign:'center',fontFamily:'Comic Sans MS'}}>Species: {species}</p>
+          <p style={{textAlign:'center',fontFamily:'Comic Sans MS'}}>Type: {type === "" ? "Unknown" : type }</p>
+          <p style={{textAlign:'center',fontFamily:'Comic Sans MS'}}>Gender: {gender}</p>
+          <p style={{textAlign:'center',fontFamily:'Comic Sans MS'}}>Origin: {origin.name}</p>
+          <p style={{textAlign:'center',fontFamily:'Comic Sans MS',marginBottom:'0'}}>Location: {location.name}</p>
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between", marginTop:'20px'}}>
+          <a className={`btn btn-secondary ${styles.btnSize}`} href="/characters/">
+            Volver
+          </a>
+          {(origin.name !== 'unknown')?(
+          <Link className={`btn btn-info ${styles.btnSize}`} to={`/location/${getEndNumber(origin.url)}`}>
+            Origin link
+          </Link>):<></>}
+          {(location.name !== 'unknown')?(
+          <Link className={`btn btn-info ${styles.btnSize}`} to={`/location/${getEndNumber(location.url)}`}>
+            Location link
+          </Link>):<></>}
+        </div>
       </Card.Body>
     </Card>
+    </div>
   );
 }
 
