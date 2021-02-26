@@ -12,9 +12,6 @@ import { getMultipleCharactersById } from "Utils/Requester";
 import Waiter from "Components/Shared/Waiter.jsx"
 
 const MultipleCharacters = ({ ids }) => {
-  console.log(typeof(ids));
-  console.log(ids);
-  console.log(ids.length);
   const { data, loading, error } = useFetch(
     () => getMultipleCharactersById({ ids }),
     []

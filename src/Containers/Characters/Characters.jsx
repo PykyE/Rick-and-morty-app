@@ -24,11 +24,11 @@ function Characters() {
   });
   const { data, loading, error } = useFetch(
     () => getCharacters({ page, ...filters }),
-    [page] // Dependencias, al cambiar la variable de estado "page", se vuelve a hacer una nueva petición
+    [page] 
   );
 
   const resetPage = () => {
-    setPage(1); // Cambiar la viariable de estado "page"
+    setPage(1); 
   };
 
   return (

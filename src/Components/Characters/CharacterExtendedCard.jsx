@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import styles from './CharacterExtendedCard.module.css';
+import { Link } from 'react-router-dom'
 
 function ExtendedCharactercard({
   name,
@@ -29,9 +30,9 @@ function ExtendedCharactercard({
           <p style={{textAlign:'center',fontFamily:'Comic Sans MS',marginBottom:'0'}}>Location: {location.name}</p>
         </div>
         <div className={styles.btnDiv}>
-          <a className={`btn btn-secondary ${styles.btnSize}`} href="/characters">
+          <Link className={`btn btn-secondary ${styles.btnSize}`} to="/characters">
             Volver
-          </a>
+          </Link>
         </div>
       </Card.Body>
     </Card>
