@@ -29,7 +29,7 @@ function ExtendedCharactercard({
           <p style={{textAlign:'center',fontFamily:'Comic Sans MS',marginBottom:'0'}}>Location: {location.name}</p>
         </div>
         <div className={styles.btnDiv}>
-          <a className={`btn btn-secondary ${styles.btnSize}`} href="/characters/">
+          <a className={`btn btn-secondary ${styles.btnSize}`} href="/characters">
             Volver
           </a>
         </div>
