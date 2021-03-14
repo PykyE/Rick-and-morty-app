@@ -1,71 +1,52 @@
 # Rick And Morty App
 
-Este es un proyecto de ACM GIWEB React, por y para los estudiantes.
+This is a rick and morty app that shows information related to characters, locations and episodes.
 
-## Requisitos
+## Requirements
 
-Para correr este proyecto en tu máquina debes tener instalado [git](https://git-scm.com/), [nodejs](https://nodejs.org/es/) y [npm](https://www.npmjs.com/) globalmente.
-
-Opcionalmente podrás usar [Docker](https://www.docker.com/) para correr el proyecto en un contenedor.
+To run this project in your machine you must have installed [git](https://git-scm.com/), [nodejs](https://nodejs.org/es/) y [npm](https://www.npmjs.com/) globally.
 
 ## Descarga
 
-Para bajar el repo debes clonarlo con `git clone`.
+To download this rep you have to clone it with `git clone`.
 
 ```
 git clone https://github.com/EdisonPeM/Rick-And-Morty-App.git
 ```
 
-## Instalación de dependencias
+## Dependencies installation
 
-Con `npm install` se descargarán las dependencias necesarias del proyecto.
+With `npm install` all the necessary dependencies of the project will be installed.
 
 ```
 npm install
 ```
 
-## Correr en Local
+## Running on local
 
-Con el comando `npm start` se levantará un servidor de desarrollo, el cuál estará corriendo en [localhost:3000/](localhost:3000/)
+With the command `npm start` a development server will be started, which will be running in [localhost:3000/](localhost:3000/)
 
 ```
 npm start
 ```
 
-## Correr en Docker
+## Deployment
 
-Para correr con docker podrás usar el script `docker-build.sh` para construir una imagen y luego el script `docker-run.sh` crear un contenedor que correa esa imagen
-
-```
-sh docker-build.sh
-sh docker-run.sh
-```
-
-Adicionalmente, si quieres ver los log podrás correr
-
-```
-docker logs -f rick-app
-```
-
-## Despliegue
-
-Puedes con construir el sitio con el comando `npm run build` y luego correr un servidor estático local con `npm run server`, éste estará corriendo en [localhost:5000/](localhost:5000/)
-
-**_Más adelante se agregarán opciones de despliegue en hosting!_**
+You can build the website with the command `npm run build` and then run an static local server with `npm run server`, this will be running on [localhost:5000/](localhost:5000/)
 
 ```
 npm run build
 npm run server
 ```
 
-## Herramientas
+## Tools
 
-Este proyecto está construido con
+This project was built with:
 
 - [React](https://reactjs.org/)
 - [Webpack](http://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para detalles
+This project is under the MIT license - see the [LICENSE](LICENSE) file for further details.
